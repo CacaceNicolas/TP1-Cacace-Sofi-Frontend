@@ -1,0 +1,57 @@
+<h1>Lista libros</h1>
+
+<div *ngIf="mostrarNotificacion" class="notification">
+    {{ mensajeNotificacion }}
+</div>
+<table>
+    <tr *ngFor="let libro of datos">
+        <td>
+            {{libro.titulo}}
+        </td>
+        <td>
+            {{libro.autor}}
+        </td>
+        <td>
+            {{libro.paginas}}
+        </td>
+        <td>
+            <button (click)="botonModificar(libro.id, libro.titulo, libro.paginas, libro.autor)">Modificar</button>
+        </td>
+        <td>
+            <button (click)="borrarLibro(libro.id)">Borrar</button>
+        </td>
+    </tr>
+</table>
+<button (click)="recogerDatos()">Actualizar lista</button>
+<ul *ngIf = "popUp">
+    <h1>Modificar Libro</h1>
+ 
+    <h2>Titulo</h2>
+    <input type="text" [formControl]="TituloMod">
+
+    <h2>Autor</h2>
+    <input [formControl]="AutorMod" type="text">
+    <h2>Paginas</h2>
+    <input [formControl]="PaginasMod" type="text">
+    <p></p>
+    <button (click)="botonAceptarModificacion()">Agregar</button>
+</ul>
+
+
+
+<div>
+    <div>
+        <h1>Agregar Libro</h1>
+        <h2>Titulo</h2>
+        <input type="text" [formControl]="Titulo">
+        <h2>Autor</h2>
+        <input [formControl]="Autor" type="text">
+        <h2>Paginas</h2>
+        <input [formControl]="Paginas" type="text">
+        <p></p>
+        <button (click)="agregarLibro()">Agregar</button>
+    </div>
+
+    
+</div>
+

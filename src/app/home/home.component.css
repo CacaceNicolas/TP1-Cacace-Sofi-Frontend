@@ -1,0 +1,276 @@
+
+.popUp {
+    display: none;
+}
+
+.popUpMod {
+    display: none;
+    visibility: hidden;
+    background-color: #546e7a; 
+    font-family: 'Roboto', sans-serif; 
+    color: #eceff1;
+}
+
+.notification {
+    position: fixed;
+    top: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #43a047;
+    color: #e8f5e9;
+    padding: 1em 1.5em; 
+    border-radius: 0.5em; 
+    z-index: 1000;
+    opacity: 0.95; 
+    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.2);
+    font-size: 0.9rem;
+}
+
+.notification.error {
+    background-color: #e53935; 
+    color: #ffebee;
+}
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f2f5; 
+    color: #444;
+    margin: 1.5em;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #2e353d;
+    text-align: left; 
+    margin-bottom: 2em;
+    border-bottom: 0.1em solid #d1d8e0;
+    padding-bottom: 0.8em; 
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    background-color: #fff;
+    box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.15); 
+    border-radius: 0.8em; 
+    overflow: hidden;
+}
+
+th, td {
+    padding: 0.8em 1em; 
+    text-align: left;
+    border-bottom: 0.05em solid #e0e0e0; 
+}
+
+th {
+    background-color: #3f51b5; 
+    color: #fff;
+    font-weight: 600; 
+    font-size: 1.1rem; 
+}
+
+tr:hover {
+    background-color: #f8f8f8;
+}
+
+button {
+    background-color: #1e88e5;
+    color: #fff;
+    border: none;
+    padding: 0.7em 1.2em;
+    border-radius: 0.4em; 
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Transiciones más suaves */
+    margin-right: 0.5em;
+    box-shadow: 0 0.15em 0.3em rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #1565c0;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2); 
+}
+
+ul {
+    list-style: none;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.15);
+    border-radius: 0.8em;
+    margin-top: 2em;
+}
+
+ul h1 {
+    color: #ff9800; 
+    text-align: left;
+    border-bottom: 0.1em solid #f57c00;
+    padding-bottom: 1em; 
+    margin-bottom: 1.5em; 
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+ul h2 {
+    color: #555;
+    margin-top: 1em; 
+    margin-bottom: 0.5em; 
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+ul input[type="text"],
+ul input[type="number"] {
+    width: calc(100% - 2em); /* Ajuste para el padding del ul */
+    padding: 0.7em;
+    margin-bottom: 1.2em; 
+    border: 0.05em solid #ccc;
+    border-radius: 0.4em;
+    font-size: 1rem; 
+}
+
+ul input:focus {
+    outline: none;
+    border-color: #1e88e5;
+    box-shadow: 0 0.1em 0.3em rgba(30, 136, 229, 0.3);
+}
+
+ul button {
+    background-color: #ff9800; 
+}
+
+ul button:hover {
+    background-color: #f57c00;
+}
+
+div > div { /* Estilos para el contenedor de "Agregar Libro" */
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 0 0.3em 0.8em rgba(0, 0, 0, 0.15);
+    border-radius: 0.8em;
+    margin-top: 2em;
+}
+
+div > div h1 {
+    color: #388e3c; 
+    text-align: left;
+    border-bottom: 0.1em solid #4caf50;
+    padding-bottom: 1em;
+    margin-bottom: 1.5em; 
+    font-size: 1.8rem; 
+    font-weight: 500;
+}
+
+div > div h2 {
+    color: #555;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-size: 1.2rem;
+    font-weight: 400; 
+}
+
+div > div input[type="text"],
+div > div input[type="number"] {
+    width: calc(100% - 2em);
+    padding: 0.7em;
+    margin-bottom: 1.2em; 
+    border: 0.05em solid #ccc; 
+    border-radius: 0.4em; 
+    font-size: 1rem; 
+}
+
+div > div input:focus {
+    outline: none;
+    border-color: #388e3c; 
+    box-shadow: 0 0.1em 0.3em rgba(56, 142, 60, 0.3);
+}
+
+div > div button {
+    background-color: #388e3c; 
+}
+
+div > div button:hover {
+    background-color: #2e7d32;
+}
+
+/* Estilo específico para el botón "Actualizar lista" */
+button:last-of-type {
+    background-color: #f9a825;
+    margin-top: 1.2em; 
+}
+
+button:last-of-type:hover {
+    background-color: #f57f17;
+}
+
+/* Media Queries para hacerlo responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 0.6em 0.8em;
+    }
+
+    button {
+        padding: 0.6em 1em;
+        font-size: 0.9rem;
+        margin-right: 0.3em;
+        margin-bottom: 0.3em;
+    }
+
+    ul h1 {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    div > div h1 {
+        font-size: 1.6rem;
+        text-align: center; 
+    }
+}
+
+@media (max-width: 576px) {
+    table {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.4em 0.6em;
+    }
+
+    button {
+        padding: 0.5em 0.8em;
+        font-size: 0.8rem;
+    }
+
+    ul {
+        padding: 1.5em;
+    }
+
+    div > div {
+        padding: 1.5em;
+    }
+
+    ul h2,
+    div > div h2 {
+        font-size: 1rem;
+    }
+
+    ul input[type="text"],
+    ul input[type="number"],
+    div > div input[type="text"],
+    div > div input[type="number"] {
+        padding: 0.6em;
+        font-size: 0.9rem;
+    }
+}
