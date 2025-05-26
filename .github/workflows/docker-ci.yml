@@ -4,7 +4,7 @@ on:
     branches: [ "main" ]
  
 env:
-  IMAGE_NAME: TP1-Cacace-Sofi-Frontend
+  IMAGE_NAME: tp1-cacace-sofi-frontend
   IMAGE_OWNER: ${{ github.repository_owner }}
  
 jobs:
